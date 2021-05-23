@@ -32,7 +32,6 @@ const success = () => {
     if (score === 80) {
         let opacityChange = document.querySelector(".gameContainer");
         opacityChange.style.opacity = 0.2;
-        showResult();
     }
     score += 10;
     document.querySelector(".try").innerHTML = "ATTEMPTS : " + (++tries);
@@ -47,19 +46,7 @@ const fail = () => {
     document.querySelector(".try").innerHTML = "ATTEMPTS : " + (++tries);
 }
 const reset = () => {
-    //  isFlipped = false;
-    //  firstCard = null;
-    //  secondCard = null;
     [isFlipped, firstCard, secondCard] = [false, null, null];
-}
-
-const showResult =  () => {
-    var showresult = document.querySelector(".result");
-    showresult.style.display = "flex";
-    setTimeout(() => {
-        var Display = document.querySelector("#star1");
-        Display.style.display = "";
-    }, 500);
 }
 
 (function shuffle() {
@@ -67,4 +54,4 @@ const showResult =  () => {
         var index = Math.floor(Math.random() * 16); // random no. b/w 0 and 15
         card.style.order = index;
     })
-})(); // it will run automatically as soon as script run.
+})();
