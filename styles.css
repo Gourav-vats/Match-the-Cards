@@ -94,9 +94,12 @@ body {
 
 @media (max-width: 500px) {
   .scoreboard{
-    width: 80vw;
+    width: 90vw;
   }
   .gameContainer{
     width: 100vw;
+  }
+  .cards{
+    height: 15%;
   }
 }
